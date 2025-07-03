@@ -1,4 +1,5 @@
 from collections import defaultdict
+from typing import *
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         #should there be two dictionaries?
