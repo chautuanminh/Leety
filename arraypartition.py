@@ -1,3 +1,5 @@
+from collections import *
+from typing import *
 class Solution:
     def arrayPairSum(self, nums: List[int]) -> int:
         #group similar values
@@ -10,4 +12,9 @@ class Solution:
             count += min(nums[i], nums[i+1])
             i+=2
         return count
-        
+def main():
+    sol = Solution()
+    nums = [6,2,6,5,1,2]
+    result = sol.arrayPairSum(nums)
+    print(result)
+main()
