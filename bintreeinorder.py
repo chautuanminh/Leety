@@ -15,3 +15,18 @@ class Solution:
             inorder(root.right)
         inorder(root)
         return res
+#### anoda one
+class Solution:
+    def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+        res = []
+        stack = []
+        pointer = root
+        while pointer or stack:
+            while pointer: 
+                stack.append(pointer)
+                pointer =  pointer.left
+            #so now you need to start adding the elements from the top as you added 0 - n from the bottom--> latest left node 
+            pointer = stack.pop()
+            res.append(pointer.val)
+            pointer = pointer.right
+        return res
